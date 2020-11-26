@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+ul,li{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav__top{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #32373d;
+    width: 300px;
+    height:100%;
+}
+
+.profile__background{
+    width:100%;
+    height:30%;
+    background: url(bg.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__image{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background: url(person.jpg) no-repeat top center/cover;
+}
+
+.profile__background p{
+    font-size: 15px;
+    color: #fff;
+    margin-top:15px
+}
+
+
+
+/* ------------------------------- Navbar list ------------------------------ */
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    cursor:pointer;
+}
+
+.navbar__icon{
+    margin-right: 18px;
+    font-size: 12px;
+    cursor:pointer;
+}
+
+.nav__list.active {
+    color: #ffff;
+  }
+ 
+
+
+/* ------------------------------ toggle button ----------------------------- */
+
+ .toggle-menu{
+    position: absolute;
+    top: 10px;
+    right:-15%;
+    width:30px;
+    height:30px;
+    background: #2f89fc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    transform: translateX(50%);
+} 
+
+.toggle-menu i {
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+  }
+
+  .nav__top {
+    transition: all 0.3s;
+  }
+
+  .nav__top.collapse {
+    transform: translateX(-100%);
+  }
+
+  .toggle-menu.collapse i {
+    transform: rotateY(0);
+  }
+
+  .section{
+        width:calc(100% - 300px);
+        padding: 50px 15px;
+        transition: all 0.3s;
+  }
+
+  .section p::first-letter{
+    font-size: 70px;
+    font-weight: 600;
+    color: #2f89fc;
+    line-height: 24px;
+  }
+
+  .section p {
+    margin-top: 20px;
+  }
+  
+  .section.collapse {
+    width: 100%;
+  }
